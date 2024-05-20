@@ -1,0 +1,29 @@
+{% extends 'webapp/base.html' %}
+
+{% block content %}
+
+<h5>Welcome to the dashboard !{{user}}</h5>
+<hr>
+<a class="btn btn-outline-primary btn-sm" href="{% url 'dashboard' %}">
+    create a new record
+</a>
+
+<hr>
+
+
+
+
+
+
+
+
+        {% for record in records %}
+            {{record.id}}
+            {{record.first_name}}
+            {{record.last_name}}
+
+        
+
+        {% endfor  %}
+
+{% endblock %}
