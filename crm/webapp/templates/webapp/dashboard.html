@@ -5,7 +5,7 @@
 <h5>Welcome to the dashboard !{{user}}</h5>
 <hr>
 <a class="btn btn-outline-primary btn-sm" href="{% url 'create-record' %}">
-    create a new record
+    create a new record  &nbsp; <i class="fa fa-plus-circle" aria-hidden="true"></i>
 </a>
 
 <hr>
@@ -44,6 +44,7 @@
                 <td> {{record.country}} </td>
 
                 <td> {{record.creation_date}} </td>
+                <td><a href="{% url 'record' record.id%}">Click me </a></td>
 
         </tr>
 
